@@ -21,9 +21,8 @@ public class Bus extends Car implements Competing{
     }
 
     @Override
-    public String pitStop() {
+    public void pitStop() {
         System.out.println("Реализация пит-стопа для автобусов");
-        return null;
     }
 
     @Override

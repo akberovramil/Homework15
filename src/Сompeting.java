@@ -1,6 +1,6 @@
 interface Competing {
 
-    String pitStop();
+    void pitStop();
 
     String bestLapTime();
 

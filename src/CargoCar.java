@@ -20,9 +20,8 @@ public class CargoCar extends Car implements Competing{
     }
 
     @Override
-    public String pitStop() {
+    public void pitStop() {
         System.out.println("Переопределние пит-стоп для грузовиков");
-        return null;
     }
 
     @Override
