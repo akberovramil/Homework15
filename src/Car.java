@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Car {
+public abstract class Car {
     private String brand;
     private String model;
     private double engineVolume;
@@ -35,6 +35,9 @@ public class Car {
         System.out.println("Автомобиль заканчивает движение");
     }
 
+
+
+
     public String getBrand() {
         return brand;
     }
@@ -59,7 +62,11 @@ public class Car {
         this.engineVolume = engineVolume;
     }
 
+    public abstract void printType();
+
+
     @Override
+
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

@@ -1,7 +1,10 @@
 public class CargoCar extends Car implements Competing{
 
-    public CargoCar(String brand, String model, double engineVolume) {
+    private LiftingCapacity liftingCapacity;
+
+    public CargoCar(String brand, String model, double engineVolume, LiftingCapacity liftingCapacity) {
         super(brand, model, engineVolume);
+        this.liftingCapacity = liftingCapacity;
     }
 
     @Override
@@ -34,5 +37,15 @@ public class CargoCar extends Car implements Competing{
     public String maxSpeed() {
         System.out.println("Переопределние максимальной скорости для грузовиков");
         return null;
+    }
+
+    @Override
+    public void printType() {
+        if (liftingCapacity == null) {
+            System.out.println("Данных недостаточно");
+        } else {
+
+            System.out.println("Грузоподъемность машины " + liftingCapacity);
+        }
     }
 }
