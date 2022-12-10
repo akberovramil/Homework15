@@ -4,6 +4,8 @@ public class DriverB<B extends PassengerCar> extends Driver {
         super(fullName, licenseYes, experienceDriver);
     }
 
+    public DriverB() {
+    }
 
     @Override
     public void goDriver() {
@@ -23,4 +25,6 @@ public class DriverB<B extends PassengerCar> extends Driver {
     public void displayInfo(B car) {
         System.out.println("Водитель " + getFullName() + " управляет автомобилем " + car + " и будет участвовать в заезде" );
     }
+
+
 }

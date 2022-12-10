@@ -1,4 +1,4 @@
-public enum BodyType {
+ enum BodyType {
     SEDAN("Седан"),
         HATCHBACK("Хетчбек"),
         COUPE("Купе"),

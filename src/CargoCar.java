@@ -2,9 +2,21 @@ public class CargoCar extends Car implements Competing{
 
     private LiftingCapacity liftingCapacity;
 
+
+
     public CargoCar(String brand, String model, double engineVolume, LiftingCapacity liftingCapacity) {
         super(brand, model, engineVolume);
         this.liftingCapacity = liftingCapacity;
+    }
+
+
+    public void passDiagnostics(DriverC driverC) {
+        if (driverC.licenseYes == true) {
+            System.out.println("Прошли диагностику");
+        } else {
+            throw new RuntimeException("Неправильный тип прав");
+        }
+
     }
 
     @Override
@@ -39,7 +51,7 @@ public class CargoCar extends Car implements Competing{
         return null;
     }
 
-    @Override
+
     public void printType() {
         if (liftingCapacity == null) {
             System.out.println("Данных недостаточно");

@@ -1,6 +1,10 @@
+import java.util.ArrayList;
+
 public class PassengerCar extends Car implements Competing {
 
     private BodyType bodyType;
+    private ArrayList<Driver> driverArrayList;
+
 
 
 
@@ -9,6 +13,17 @@ public class PassengerCar extends Car implements Competing {
         super(brand, model, engineVolume);
         this.bodyType = bodyType;
     }
+
+    public void passDiagnostics(DriverB driverB) {
+        if (driverB.licenseYes == true) {
+            System.out.println("Прошли диагностику");
+        } else {
+            throw new RuntimeException("Неверный тип прав");
+        }
+    }
+
+
+
 
     @Override
     public void startMove() {
@@ -43,6 +58,10 @@ public class PassengerCar extends Car implements Competing {
     }
 
     @Override
+    public ArrayList<Driver> getDriverArrayList() {
+        return super.getDriverArrayList();
+    }
+
     public void printType() {
         if (bodyType == null) {
             System.out.println("Данных недостаточно");

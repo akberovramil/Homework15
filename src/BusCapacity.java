@@ -1,4 +1,4 @@
-public enum BusCapacity {
+ enum BusCapacity {
 
     LEVEL_1(0, 10),
     LEVEL_2(11, 25),

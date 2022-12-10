@@ -1,9 +1,15 @@
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Objects;
 
-public abstract class Car {
+public class Car {
     private String brand;
     private String model;
     private double engineVolume;
+    private HashSet<Car> carArrayList;
+    private final HashSet<Sponsor> sponsorsList = new HashSet<>();
+    private HashSet<Driver> driverArrayList = new HashSet<>();
+    private final HashSet<Mechanic> mechanics = new HashSet<>();
 
     public Car(String brand, String model, double engineVolume) {
         if (brand == null || brand.isEmpty() || brand.isBlank()) {
@@ -23,8 +29,13 @@ public abstract class Car {
         } else {
             this.engineVolume = engineVolume;
         }
+    }
 
+    public Car() {
 
+    }
+
+    public void passDiagnostics() {
     }
 
     public void startMove() {
@@ -33,6 +44,18 @@ public abstract class Car {
 
     public void endMove() {
         System.out.println("Автомобиль заканчивает движение");
+    }
+
+    public void addDriver(Driver driver) {
+
+    }
+
+    public void addMechanic(Mechanic<?> mechanic) {
+        mechanics.add(mechanic);
+    }
+
+    public void addSponsors(Sponsor sponsor) {
+        sponsorsList.add(sponsor);
     }
 
 
@@ -62,10 +85,17 @@ public abstract class Car {
         this.engineVolume = engineVolume;
     }
 
-    public abstract void printType();
+    public HashSet<Car> getCarArrayList() {
+        return carArrayList;
+    }
+
+    public HashSet<Sponsor> getSponsorsList() {
+        return sponsorsList;
+    }
 
 
-    @Override
+
+
 
     public boolean equals(Object o) {
         if (this == o) return true;

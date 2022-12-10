@@ -1,4 +1,4 @@
-public enum LiftingCapacity {
+ enum LiftingCapacity {
 
     N1(0.0, 3.5),
     N2(3.5, 12.0),

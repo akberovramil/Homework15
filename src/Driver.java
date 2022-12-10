@@ -3,13 +3,17 @@ import java.util.Objects;
 public class Driver {
 
     private String fullName;
-    private boolean licenseYes;
+    public boolean licenseYes;
     private int experienceDriver;
 
     public Driver(String fullName, boolean licenseYes, int experienceDriver) {
         this.fullName = fullName;
         this.licenseYes = licenseYes;
         this.experienceDriver = experienceDriver;
+    }
+
+    public Driver() {
+
     }
 
     public void goDriver() {
@@ -22,7 +26,6 @@ public class Driver {
 
 
     }
-
     public String getFullName() {
         return fullName;
     }

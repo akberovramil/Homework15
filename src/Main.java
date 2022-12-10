@@ -25,7 +25,15 @@ public class Main {
         DriverC arslan = new DriverC<>("Закиров Арслан Ильгизович", true, 1);
         arslan.displayInfo(kamaz);
         DriverD ruslan = new DriverD<>("Давлетшин Руслан Ильнурович", true, 3);
-        ruslan.displayInfo(ikarus);
+        lada.passDiagnostics(ramil);
+        lada.passDiagnostics(ramil);
+        kamaz.passDiagnostics(arslan);
+        Car arslMobil = new Car();
+        lada.getDriverArrayList(ramil);
+
+
+
+
 
 
 

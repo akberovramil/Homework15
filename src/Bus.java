@@ -2,10 +2,13 @@ public class Bus extends Car implements Competing {
 
     private BusCapacity busCapacity;
 
+
     public Bus(String brand, String model, double engineVolume, BusCapacity busCapacity) {
         super(brand, model, engineVolume);
         this.busCapacity = busCapacity;
     }
+
+
 
     @Override
     public void startMove() {
@@ -17,6 +20,10 @@ public class Bus extends Car implements Competing {
         System.out.println("Автобус заканчивает движение");
     }
 
+
+    public void passDiagnostics(DriverD driverD) {
+        System.out.println("Автобус " + getBrand() + " в диагностике не нуждается");
+    }
 
     @Override
     public String toString() {
@@ -40,7 +47,7 @@ public class Bus extends Car implements Competing {
         return null;
     }
 
-    @Override
+
     public void printType() {
         if (busCapacity == null) {
             System.out.println("Данных недостаточно");
