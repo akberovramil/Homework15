@@ -7,11 +7,9 @@ public class Sponsor {
         this.name = name;
         this.amount = amount;
     }
-
     public void toSponsorRace() {
         System.out.printf("Спонсор \"%s\" проспонсировал заезд на %d%n", name, amount);
     }
-
     public String getName() {
         return name;
     }

@@ -4,16 +4,10 @@ public class PassengerCar extends Car implements Competing {
 
     private BodyType bodyType;
     private ArrayList<Driver> driverArrayList;
-
-
-
-
-
     public PassengerCar(String brand, String model, double engineVolume, BodyType bodyType) {
         super(brand, model, engineVolume);
         this.bodyType = bodyType;
     }
-
     public void passDiagnostics(DriverB driverB) {
         if (driverB.licenseYes == true) {
             System.out.println("Прошли диагностику");
@@ -21,20 +15,14 @@ public class PassengerCar extends Car implements Competing {
             throw new RuntimeException("Неверный тип прав");
         }
     }
-
-
-
-
     @Override
     public void startMove() {
         System.out.println("Легковой автомобиль начинает движение");
     }
-
     @Override
     public void endMove() {
         System.out.println("Легковой автомобиль заканчивает движение");
     }
-
     @Override
     public String toString() {
         return "Легковой автомобиль " + getBrand() + ", модель " + getModel();
@@ -44,24 +32,16 @@ public class PassengerCar extends Car implements Competing {
     public void pitStop() {
         System.out.println("Реализация пит-стопа для легковушек");
     }
-
     @Override
     public String bestLapTime() {
         System.out.println("Реализация лучше времери круга для легковушек");
         return null;
     }
-
     @Override
     public String maxSpeed() {
         System.out.println("Реализация максимальной скорости легковушек");
         return null;
     }
-
-    @Override
-    public ArrayList<Driver> getDriverArrayList() {
-        return super.getDriverArrayList();
-    }
-
     public void printType() {
         if (bodyType == null) {
             System.out.println("Данных недостаточно");

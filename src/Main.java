@@ -18,7 +18,6 @@ public class Main {
         System.out.println(iz.toString());
         dragon.endMove();
         audi.startMove();
-
         DriverB ramil = new DriverB<>("Акберов Рамиль Дамирович", true, 2);
         ramil.displayInfo(lada);
         System.out.print("");
@@ -29,7 +28,6 @@ public class Main {
         lada.passDiagnostics(ramil);
         kamaz.passDiagnostics(arslan);
         Car arslMobil = new Car();
-        lada.getDriverArrayList(ramil);
 
 
 

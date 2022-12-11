@@ -5,26 +5,19 @@ public class Driver {
     private String fullName;
     public boolean licenseYes;
     private int experienceDriver;
-
     public Driver(String fullName, boolean licenseYes, int experienceDriver) {
         this.fullName = fullName;
         this.licenseYes = licenseYes;
         this.experienceDriver = experienceDriver;
     }
-
     public Driver() {
 
     }
-
     public void goDriver() {
     }
-
     public void stopDriver() {
     }
-
     public void refuelCar() {
-
-
     }
     public String getFullName() {
         return fullName;
@@ -53,12 +46,10 @@ public class Driver {
         Driver driver = (Driver) o;
         return licenseYes == driver.licenseYes&& experienceDriver == driver.experienceDriver && Objects.equals(fullName, driver.fullName);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(fullName, licenseYes, experienceDriver);
     }
-
     @Override
     public String toString() {
         return "Driver{" +

@@ -8,7 +8,6 @@ public class DriverC<C extends CargoCar> extends  Driver{
     public void goDriver() {
         System.out.println("¬одитель грузовика " + getFullName() + " начинает движение");
     }
-
     @Override
     public void stopDriver() {
         System.out.println("¬одитель грузовика " + getFullName() + " заканчивает движение");
